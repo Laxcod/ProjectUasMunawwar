@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            app:itemIconTint="@color/teks"
+            app:itemTextColor="@color/teks"
+            app:menu="@menu/drawermenu">
+
+        </com.google.android.material.navigation.NavigationView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/bgwhite"
+                            android:id="@+id/bgkeyboard">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/bgkeyboard"
+                            android:layout_alignTop="@id/bgkeyboard"
+                            android:layout_alignBottom="@id/bgkeyboard"
+                            android:layout_alignRight="@id/bgkeyboard"
+                            android:layout_margin="1dp"
+                            android:gravity="center"
+                            android:textColor="@color/teks"
+                            android:textStyle="bold"
+                            android:text="Selamat Datang Di Laman Ku">
+
+                        </TextView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="About"
+                            android:textColor="@color/teks"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="assalamualaikum warahmatullahi wabarakatuh,Bon Giorno(kalau disana udh malam terima aja lah ya), sebelum saya memulai mengisi blog saya alangkah baik nya saya memperkenalkan diri saya terlebih dahulu,seperti kata pepatah tak kenal maka tak sayang maka saya akan memulai perkenalan diri saya terlebih dahulu.
+
+Nama : Munawwar Anugrah Pratama
+
+Nama Panggilan :nawar,war,ape,laxcod,mumun,moemoe,momo.
+
+Hobi : ̶S̶a̶y̶a̶ ̶H̶o̶b̶i̶ ̶B̶e̶r̶n̶a̶p̶a̶s̶ Rebahan
+
+mungkin itu saja yang dapat saya sampaikan...kenapa tidak panjang???karena saya orang nya membosankan,kurang menarik dan susah memperkenal(mengeluarkan isi dalam otak saya) diri dengan panjang lebar lol.Sekian dan Terimakasih.
+
+Arriverdeci"
+                            android:textColor="@color/teks"
+                            android:gravity="center"
+                            android:padding="12dp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Portofolio"
+                            android:textColor="@color/teks"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <GridView
+                            android:nestedScrollingEnabled="true"
+                            android:id="@+id/gridview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:numColumns="3"
+                            android:columnWidth="200dp"
+                            android:verticalSpacing="10dp"
+                            android:horizontalSpacing="10dp"
+                            android:stretchMode="columnWidth"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Blog"
+                            android:textColor="@color/teks"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/etika"
+                                android:id="@+id/blog2">
+
+                            </ImageView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Etika Yang Harus Di Jaga Dalam Menggunakan Teknologi Informasi
+Etika Yang Harus Di Jaga Dalam Menggunakan Teknologi Informasi "
+                                android:textColor="@color/teks"
+                                android:gravity="center"
+                                android:padding="12dp">
+
+                            </TextView>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Read More"
+                                android:background="@color/teks"></androidx.appcompat.widget.AppCompatButton>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/excel"
+                                android:id="@+id/blog3">
+
+                            </ImageView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Hal-Hal Yang Mengenai Microsoft Excel Dan Spreadsheet
+Apa Itu Yang di maksud dengan Spreedsheet???
+
+Spreadsheet adalah merupakan sebuah lembaran kertas yang di dalam nya berisi sebua data dalam bentuk kolom dan baris.Spreedsheet juga memiliki fungsi yaitu untuk membuat sebuah laporan keuangan,laporan penjualan,laporan pembelian,menghitung sebuah formula,membuat suatu tabel lembar kerja,dan lain-lain(selama tersedia di fitur Spreadsheet tersebut).Spreadsheet juga sangat berbeda dengan database.Soalnya Spreadsheet ini tidak menyediakan fitur query(kueri) untuk melakukan kegiatan basis data dan juga tidak menyediakan fitur item dana dan struktur data yang biasanya ada di aplikasi database.ini lah yang menjadi pembeda antara spreadsheet dan basis data.
+Apa Itu Microsoft Excel???
+
+Microsoft Excel adalah sebuah program(software) aplikasi pengolah kata/lembar kerja yang dibuat oleh Microsoft Corporation untuk sistem operasi(OS) Microsoft Windows dan Mac OS.Software Pengolah angka besutan Microsfot ini dilengkapi dengan fitur kalkulasi dan pembuatan grafik sesuai dengan strategi marketing Microsoft"
+                                android:textColor="@color/teks"
+                                android:gravity="center"
+                                android:padding="12dp">
+
+                            </TextView>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Read More"
+                                android:background="@color/teks"></androidx.appcompat.widget.AppCompatButton>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/os"
+                                android:id="@+id/blog1">
+
+                            </ImageView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="OS atau Biasa di Panggil dengan Sistem Operasi APA ITU OS(Atau biasa di panggil Sistem Operasi)???
+
+Os(Operating System) atau biasa di panggil oleh orang termasuk saya dengan sebutan sistem operasi adalah sebuah software(bahasa indonesianya perangkat lunak) yang terletak pada sistem dan mengatur serangkaian sumber/pemakain daya/fungsi dari perangkat keras(bahasa inggris nya hardware bukan T̶u̶p̶p̶e̶r̶w̶a̶r̶e̶) yang ada dan terletak pada sebuah komputer/desktop maupun laptop.tanpa adanya Os(Operating System)/bahasa indonesia nya Sistem Operasi saya berani jamin bahwa komputer/desktop maupun laptop antum tidak dapat dijalankan dan tidak dapat menggunakan aplikasi yang ada di komputer/desktop maupun laptop kalian."
+                                android:textColor="@color/teks"
+                                android:gravity="center"
+                                android:padding="12dp">
+
+                            </TextView>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Read More"
+                                android:background="@color/teks"></androidx.appcompat.widget.AppCompatButton>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
